@@ -34,7 +34,7 @@ void *Thread2Func(void *pArg)
 	int* p = (int*)pArg;
 	int myNum = *p; // myNum = 1
 
-	//sleep(0.1); // 100ms sleep
+	//sleep(0.1); // 100ms sleep 
 
 	pthread_mutex_lock(&g_Mutex);
 	g_Val += 2;

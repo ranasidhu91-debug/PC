@@ -16,7 +16,7 @@ void* ProcessFunc(void *pArg) // Common function prototype
 	return 0;
 }
  
-int main()
+int main() 
 {	
 	pthread_t tid[NUM_THREADS];
 	int threadNum[NUM_THREADS];
