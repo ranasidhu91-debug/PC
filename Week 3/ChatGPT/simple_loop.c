@@ -10,13 +10,14 @@ int main()
     {
         int lSum = 0;
         #pragma omp for
+        for (i = 0; i < 20; i++)
         {
-            for (i = 0; i < 20; i++)
-            {
-                lSum += i;
-            }
+            lSum+=i;
         }
-        total += lSum;
+        #pragma omp critical
+        {
+            total += lSum;
+        }
     }
 
     printf("Total:%d\n",total);
