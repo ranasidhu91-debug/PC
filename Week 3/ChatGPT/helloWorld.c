@@ -4,6 +4,7 @@
 
 int main()
 {
+    omp_set_num_threads(12);
     int number = omp_get_num_threads();
     printf("Number of threads:%d\n",number);
     fflush(stdout);
